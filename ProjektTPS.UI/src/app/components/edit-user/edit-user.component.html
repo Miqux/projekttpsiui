@@ -1,0 +1,24 @@
+<div *ngIf="user">
+    <h2>
+        {{ user.name }}
+    </h2>
+    <div>
+        Name:
+        <input [(ngModel)] = "user.name" placeholder="Name" />
+    </div>
+    <div>
+        FirsName:
+        <input [(ngModel)] = "user.fistName" placeholder="First Name" />
+    </div>
+    <div>
+        LastName:
+        <input [(ngModel)] = "user.lastName" placeholder="Last Name" />
+    </div>
+    <div>
+        Place:
+        <input [(ngModel)] = "user.place" placeholder="Place" />
+    </div>
+    <button (click)="updateUser(user)" *ngIf="user.id">Zapisz</button>
+    <button (click)="deleteUser(user)" *ngIf="user.id">Usuń</button>
+    <button (click)="createUser(user)" *ngIf="!user.id">Utwórz</button>
+</div>

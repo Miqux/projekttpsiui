@@ -1,0 +1,17 @@
+<table>
+    <thead>
+      <th>Name</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Place</th>
+      <th></th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let hero of users">
+        <td>{{ hero.name }}</td>
+        <td>{{ hero.fistName }}</td>
+        <td>{{ hero.lastName }}</td>
+        <td>{{ hero.place }}</td>
+      </tr>
+    </tbody>
+  </table>
