@@ -27,7 +27,7 @@ export class EditUserComponent implements OnInit{
   }
 
   createUser(user: User){
-    this.userService.createUser(user).subscribe((users: User[]) => this.usersUpdated.emit(users));
+    //this.userService.createUser(user).subscribe((users: User[]) => this.usersUpdated.emit(users));
   }
 
 }

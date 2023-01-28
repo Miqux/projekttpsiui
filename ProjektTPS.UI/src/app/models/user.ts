@@ -1,9 +1,9 @@
 export class User{
-    id?: number;
-    name = "";
-    fistName = "";
-    lastName = "";
-    place = "";
-    login = "";
-    password = "";
+    Id?: number;
+    Name = "";
+    FirstName = "";
+    LastName = "";
+    Place = "";
+    Login = "";
+    Password = "";
 }

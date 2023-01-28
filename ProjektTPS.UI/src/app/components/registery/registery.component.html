@@ -1,5 +1,5 @@
-<section class="vh-100 gradient-custom">
-  <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+
+ <div class="mask d-flex align-items-center h-100 gradient-custom-3">
     <div class="container h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col-12 col-md-9 col-lg-7 col-xl-6">
@@ -9,37 +9,43 @@
 
 
                 <div class="form-outline mb-4">
-                  <input type="text" id="fistname" [(ngModel)]="registerym.fistName" class="form-control form-control-lg" />
-                  <label class="form-label" for="fistname">Imię</label>
-                </div>
+                  <input type="text" id="fistname" name="firstname" [(ngModel)]="registerym.FirstName" class="form-control form-control-lg"/>
+                  <label class="form-label" for="lastname">Imię</label>
+                </div>  
 
                 <div class="form-outline mb-4">
-                  <input type="text" id="lastname" [(ngModel)]="registerym.lastName" class="form-control form-control-lg" />
+                  <input type="text" id="lastname" [(ngModel)]="registerym.LastName" class="form-control form-control-lg" />
                   <label class="form-label" for="lastname">Nazwisko</label>
                 </div>
 
+
                 <div class="form-outline mb-4">
-                  <input type="text" id="name" [(ngModel)]="registerym.name" class="form-control form-control-lg" />
+                  <input type="text" id="name" [(ngModel)]="registerym.Name" class="form-control form-control-lg" />
                   <label class="form-label" for="name">Nick</label>
                 </div>
 
                 <div class="form-outline mb-4">
-                    <input type="text" id="login" [(ngModel)]="registerym.login" class="form-control form-control-lg" />
+                  <input type="text" id="place" [(ngModel)]="registerym.Place" class="form-control form-control-lg" />
+                  <label class="form-label" for="name">Miasto</label>
+                </div>
+
+                <div class="form-outline mb-4">
+                    <input type="text" id="login" [(ngModel)]="registerym.Login" class="form-control form-control-lg" />
                     <label class="form-label" for="login">Login</label>
                   </div>
 
                   <div class="form-outline form-white mb-4">
-                    <input type="password" [(ngModel)]="registerym.password" id="typePasswordX" class="form-control form-control-lg" />
+                    <input type="password" [(ngModel)]="registerym.Password" id="typePasswordX" class="form-control form-control-lg" />
                     <label class="input-label" for="typePasswordX">Hasło</label>
                   </div>
 
-
-                <div class="form-check d-flex justify-content-center mb-5">
-                  <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3cg" />
-                  <label class="form-check-label" for="form2Example3g">
-                   Akceptuje warunki forum zawarte w <a href="#!" class="text-body"><u>Warunki forum</u></a>
-                  </label>
-                </div>
+                <div class="d-flex justify-content-center text-center mt-4 pt-1">
+                  <div class="alert alert-danger d-flex align-items-center" role="alert" *ngIf="error">                    
+                      <div>  
+                        {{ error }}                    
+                      </div>
+                  </div>
+              </div>
 
                 <div class="d-flex justify-content-center">
                   <button type="button"
@@ -55,4 +61,3 @@
       </div>
     </div>
   </div>
-</section>

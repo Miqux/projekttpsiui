@@ -1,24 +1,24 @@
 <div *ngIf="user">
     <h2>
-        {{ user.name }}
+        {{ user.Name }}
     </h2>
     <div>
         Name:
-        <input [(ngModel)] = "user.name" placeholder="Name" />
+        <input [(ngModel)] = "user.Name" placeholder="Name" />
     </div>
     <div>
         FirsName:
-        <input [(ngModel)] = "user.fistName" placeholder="First Name" />
+        <input [(ngModel)] = "user.FirstName" placeholder="First Name" />
     </div>
     <div>
         LastName:
-        <input [(ngModel)] = "user.lastName" placeholder="Last Name" />
+        <input [(ngModel)] = "user.LastName" placeholder="Last Name" />
     </div>
     <div>
         Place:
-        <input [(ngModel)] = "user.place" placeholder="Place" />
+        <input [(ngModel)] = "user.Place" placeholder="Place" />
     </div>
-    <button (click)="updateUser(user)" *ngIf="user.id">Zapisz</button>
-    <button (click)="deleteUser(user)" *ngIf="user.id">Usuń</button>
-    <button (click)="createUser(user)" *ngIf="!user.id">Utwórz</button>
+    <button (click)="updateUser(user)" *ngIf="user.Id">Zapisz</button>
+    <button (click)="deleteUser(user)" *ngIf="user.Id">Usuń</button>
+    <button (click)="createUser(user)" *ngIf="!user.Id">Utwórz</button>
 </div>
